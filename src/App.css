@@ -1,0 +1,391 @@
+
+.App {
+  text-align: center;
+ 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.carousel{
+  max-width: 88%;
+  max-height: 260px;
+margin-top: 53px;
+ margin-left:161px;
+ margin-right:161px;
+ 
+  
+  
+
+  
+
+
+}
+.container3{
+
+  text-align: center;
+  display: block;
+  margin-left: 300px;
+  margin-right: auto;
+
+}
+
+.cards{
+ 
+  height: 226px;
+  width: 136px;
+}
+.cardGrid{
+  margin-left: 161px;
+  margin-right: 161px;
+  height: 226px;
+  width: 136px;
+  padding-left: 27px;
+  float: left;
+}
+.Cards4{
+  margin-left: 161px;
+  margin-right: 161px;
+  width: 245;
+  height: 275;
+  
+  /* padding: 100px; */
+
+}
+.card__catogeries{
+  padding-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: aliceblue;
+  
+}
+.card__info{
+  background-color: black;
+  color: aliceblue;
+  max-width: 100%;
+  height: 50px;
+}
+.card__upper{
+  background-color: black;
+  color: aliceblue;
+  max-width: 100%;
+  height: 20px;
+}
+.produce{
+  background-color:black;
+  color: aliceblue;
+  text-align: center;
+  width: 329px;
+  height: 49px;
+  border-radius: 20px;
+  margin-left: 635px;
+  margin-right: 636px;
+  padding: 10px;;
+  
+}
+.paper_3{
+  max-width: 76px;
+  height: 76px;
+  color: #fbc936;
+  background-color: #fbc936;
+  /* padding-left: 125px; */
+ 
+  
+  
+}
+
+.paper_4{
+  max-width: 136px;
+  height: 225px;
+  background-color: #61dafb;
+  padding-left: 125px;
+}
+.produce_1{
+  text-align: center;
+  font-family: Poppins;
+  font-size: 29px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.48;
+  letter-spacing: normal;
+}
+.call3{
+ padding-left: 175px;
+ 
+
+ 
+}
+.container4{
+  margin-bottom: 91px;
+  margin-left: 155px;
+  margin-right:161px ;
+  max-width: 1280px;
+  height: 243px;
+  background-image: URL( "/src/Assets/images/apartment-clean-condominium-279719.png");
+  
+}
+.Rectangle-424 {
+  padding: 20px;
+  width: 320px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+.Rectangle-424 #label{
+text-align: center;
+}
+.Subscribe {
+  width: 70px;
+  height: 19px;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.85;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  
+  
+}
+.Rectangle-425 {
+  width: 119px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #fbc936;
+ 
+}
+.letters{
+  width: 504px;
+  height: 78px;
+  font-family: Poppins;
+  font-size: 29px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: left;
+  margin-top: 81px;
+  margin-bottom: 81px;
+  color:#ffffff ;
+  
+  
+}
+.sub{
+  margin-top: 81px;
+  margin-bottom: 81px;
+  
+  
+}
+
+.Grid container{
+  background-color: #61dafb;
+}
+
+.Icon_c3{
+  width: 34.5px;
+  height: 34.5px;
+  object-fit: contain;
+  margin: 20px;
+   /* background-image: url("./Assets/images/Group 1256.png" );  */
+  
+  
+}
+
+.Cart{
+  margin-left: 159px;
+  margin-right: 159px;
+ 
+}
+.HELLO{
+
+    width: 136px;
+    height: 52px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 37px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.51;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+  }
+  .Mr-Barrak-Obama {
+    width: 221px;
+    height: 35px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.52;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  .ACCOUNT-SETTINGS {
+    width: 239px;
+    height: 33px;
+   
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    
+  }
+  .Profile-Information-Manage-Addresses {
+    width: 191px;
+    height: 68px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  .PAYMENTS {
+    width: 127px;
+    height: 33px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  .Path-1126 {
+    width: 316.2px;
+    color: #000000;
+   
+  }
+  .LOGOUT {
+    width: 98px;
+    height: 33px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  
+  .MY-Shopping-CART {
+    width: 236px;
+    height: 33px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+.Checkbox{
+margin-top: 75px;
+width: 18px;
+height: 18px;
+
+  }
+  .CartBox{
+    width: 250px;
+    height: 209px;
+    background-color: #d8d8d8;
+  
+  }
+  .Adoni-Brown-Grooved {
+    width: 249px;
+    height: 28px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+
+  .EditCart{
+    width: 218px;
+  height: 39px;
+  /* background-color: #fbc936; */
+  }
+  .CANCEL-ORDER {
+    width: 147px;
+    height: 28px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  .side_right{
+    border-bottom: #000000 solid 1px;
+  }
+
+  .Path-890 {
+    width: 237.3px;
+    height: 38px;
+    background-color: #fbc936;
+    margin-left: 681px;
+    margin-right: 681px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
