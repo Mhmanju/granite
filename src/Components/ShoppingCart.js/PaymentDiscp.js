@@ -10,26 +10,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Discription() {
+export default function PaymentDiscription() {
   const classes = useStyles();
 
   return (
       <div className="Disp">
 
      <p className="Adoni-Brown-Grooved">Adoni Brown Grooved</p>
-    <p><b style={{ color:"black" }}>Quantity:</b> 140 CARTONS </p>
-    <p><b style={{ color:"black" }}>AMOUNT :</b> 000000000000000 </p>
+   
 
     <Grid container spacing={2}>
     <Grid item xs={6} sm={6}>
-    <Button className="EditCart" variant="contained" color="#ffeb3b" style={{ backgroundColor:"#ffc107" }}>
-    <b>EDIT CART</b>
-  </Button>
+    <p><b style={{ color:"black" }}>Quantity:</b> 140 CARTONS </p>
+    <p><b style={{ color:"black" }}>AMOUNT :</b> 000000000000000 </p>
     </Grid>
 
     <Grid item xs={6} sm={6}>
-    <Button className="CANCEL-ORDER" style={{marginTop:"7px",lineHeight: "1.5"}}>
-    CANCEL ORDER
+    <Button className="EditCart" variant="contained" color="#ffeb3b" style={{ backgroundColor:"#ffc107" }}>
+    <b>EDIT QUINTITY</b>
   </Button>
     </Grid>
     </Grid>

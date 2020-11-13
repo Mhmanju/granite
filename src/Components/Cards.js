@@ -6,6 +6,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
+import {Link} from 'react-router-dom';
+import Routers from './Router/Router';
 // import Images from "./Images";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,12 +15,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    height: 245,
-    width: 275,
-    imageRendering: " https://tse1.mm.bing.net/th?id=OIP.CaPyrIE_F0aC3Fgxc5EWvAHaFj&pid=Api&P=0&w=201&h=152"
+  
   },
   control: {
-    padding: theme.spacing(2),
+   
   },
  
 }));
@@ -32,47 +32,33 @@ export default function SpacingGrid() {
   };
 
   return (
-    <Grid container className={classes.root} spacing={2}>
-      <Grid item xs={12}>
-      <p className="produce"> Produces today </p>
-      
-        <Grid container justify="center" spacing={spacing}>
+    <Grid container className="Cards4" spacing={3}>
+    <p className="produce" style={{ padding:"10px" }}> Products in Today </p>
+    
+      <Grid item xs={12} sm={12}>
        
-        <br></br>
+      
+        <Grid container justify="center" spacing={spacing} style={{  }}>
+       
+       
           {[0, 1, 2,3].map((value) => (
-            <Grid key={value} item>
+            <Grid className="card4size" key={value} item style={{ }}>
             <div className="card__upper"></div>
-              <Paper className={classes.paper} style={{ backgroundColor: "#eeeeee" }} elevation={3}></Paper>
+              <Paper className="paperCard" style={{maxWidth:"100%" }} elevation={3}></Paper>
               <div className="card__info">
-              <span className="card__catogeries">Text</span>
-                  
+              
+              <Link to='/Cart'> <span className="card__catogeries">Text</span></Link>
+              
                   </div>
+
+                  
               
             </Grid>
           ))}
+         
         </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.control}>
-        
-          <Grid container>
-          
-            <Grid item>
-              
-              <RadioGroup
-                name="spacing"
-                aria-label="spacing"
-                value={spacing.toString()}
-                onChange={handleChange}
-                row
-              >
-              
-               
-              </RadioGroup>
-            </Grid>
-          </Grid>
-        </Paper>
-      </Grid>
+    
     </Grid>
 
 

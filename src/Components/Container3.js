@@ -31,25 +31,27 @@ export default function SpacingGrid() {
   };
 
   return (
-    <Grid container className={classes.root} spacing={12}>
+    <Grid container className={classes.root} spacing={1}>
       <Grid item xs={12}>
-      <p className="produce_1"> Why should you choose us? </p>
+      <p className="produce_1" justify="center"> Why should you choose us? </p>
       
-        <Grid container justify="" spacing={spacing}>
+        <Grid container justify="center" spacing={spacing} className="contcells">
        
         <br></br>
           {[0, 1, 2,3].map((value) => (
-            <Grid key={value} item>
+            <Grid key={value} item  >
+            <div className="contpaper3">
             <div className="call3">
               <Paper className="paper_3" elevation={10} style={{ backgroundColor: "#ffc107" }} ><img  className="Icon_c3"  
               src={'../Assets/images/apartment-clean-condominium-279719@2x.png'} style={{ width: '30px', height: '30px' }} ></img> </Paper>
-            
+              </div>
               <div className="card3__info">
               <span className="card3__catogeries">xxxxxxxxxxxxxxxxxxxxx</span>
-              <p className="card3__catogeries">xxxxxxxxxxxxxx</p>
-              
-                  </div>
-                  </div>
+              <p className="card4__catogeries">All purchases over $399 are eligible for
+              free shipping via UPS Pack and Ship.</p>
+              </div>
+              </div>
+                  
             </Grid>
           ))}
         </Grid>

@@ -1,258 +1,161 @@
-import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import InputLabel from '@material-ui/core/InputLabel';
-// import MenuItem from '@material-ui/core/MenuItem';
-// import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import {
+  AppBar,
+  Avatar,
+  Badge,
+  Box,
+  IconButton,
+  makeStyles,
+  Toolbar,
+ 
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
+import {Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
+  fix: theme.mixins.toolbar,
+  root: {
+    flexGrow: 1
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   },
-  title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
-  },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: '1000',
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-   
-  },
-  inputRoot: {
-    color: 'inherit',
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
-  },
-  sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
-  },
-  sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
-  },
+  logo: {
+    width: "267px",
+    height: "65px",
+    objectFit: "contain"
+  }
 }));
-
-export default function PrimarySearchAppBar() {
+export default (props) => {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  const mystyle = {
-    color: "white",
-    backgroundColor: "yellow",
-    width: "66",
-    height: "26",
-    fontFamily: "Arial"
-  };
-
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
-
-  const menuId = 'primary-search-account-menu';
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
-
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
-
   return (
-     
-    <div className={classes.grow}>
-      <AppBar position="static">
-        <Toolbar>
-         <div style={mystyle}>
-        <InputLabel id="demo-controlled-open-select-label" >Age</InputLabel>
-        <Select
-          labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
-        //   open={open}
-        //   onClose={handleClose}
-        //   onOpen={handleOpen}
-          value="age"
-        //   onChange={handleChange}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        </div>
-         
-        <div className="searchBar"> 
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-          </div>
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
+    <div>
+      <AppBar style={{ backgroundColor:"Black" }}>
+        <Toolbar variant="dense">
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon />
+          </IconButton>
+          <img src={props.logo} alt="logo" className={classes.logo} />
+          <Box flexGrow="1" />
+          <MenuItems />
+          <User />
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+      <div className={classes.fix} />
+    </div>
+  );
+};
+
+const MenuItems = () => {
+  const data = [   
+    
+    
+            {
+                linkTo: "/", 
+                text: "HOME"
+            },
+            {
+                linkTo: "/Cart", 
+                text: "PRODUCTS"
+            },
+            {
+              linkTo: "/Cart", 
+              text: "SUPPLIERS"
+          },
+          {
+              linkTo: "/", 
+              text: "STONE LIBRARY"
+          },
+          {
+            linkTo: "/Payment", 
+            text:    "PRICE LISTS"
+
+        },
+        {
+            linkTo: "ProfileUpdate", 
+            text: "QUARRIES"
+        },
+        {
+          linkTo: "/Payment", 
+          text: "BUYINGS"
+      },
+      {
+          linkTo: "/ProfileUpdate", 
+          text: "REQUESTS"
+      },
+      {
+        linkTo: "/ProfileUpdate", 
+        text:    "CONTACT US"
+
+    },
+   
+           
+  ];
+
+
+
+// var navbar = {};
+// navbar.brand =  {
+//                     linkTo: "#", 
+//                     text: " Navbar"
+//                 };
+// navbar.links = [
+//         {
+//             linkTo: "#", 
+//             text: "Link 1"
+//         },
+//         {
+//             linkTo: "#", 
+//             text: "Link 2"
+//         },
+//         {
+//             dropdown: true, 
+//             text: "Dropdown", 
+//             links: [
+//                 {
+//                     linkTo: "#", 
+//                     text: "Dropdown Link 1"
+//                 },
+//                 {
+//                     linkTo: "#", 
+//                     text: "Dropdown Link 2", 
+//                     active: true
+//                 }
+//             ]
+//         }
+// ];
+  return (
+    <div >
+   
+
+    {data.map((item) => (
+  <Link to={item.linkTo} style={{ whiteSpace:"nowrap",
+          fontWeight:"500",
+          borderRight:"3px solid white",
+          paddingRight:"10px",
+          paddingLeft:"10px",
+          color:"white"  }}>
+    {item.text}
+    </Link>
+    ))}
     </div>
   );
 }
+const User = () => {
+  return (
+    <Box marginLeft="15px">
+      <Badge badgeContent={4} color="secondary">
+        <Avatar>
+          <ShoppingCartRoundedIcon color="primary" />
+        </Avatar>
+      </Badge>
+    </Box>
+  );
+};

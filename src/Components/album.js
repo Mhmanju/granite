@@ -8,15 +8,13 @@ import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
 // import Images from "./Images";
 
-import purple from '@material-ui/core/colors/purple';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   paper: {
-    
-    height: 136,
-    width: 225,
+   
     
     
   },
@@ -37,123 +35,24 @@ export default function SpacingGrid() {
   return (
     <div>
     <Grid container className={classes.root} spacing={2} >
-      <Grid item xs={12}>
+      <Grid item xs={12} >
      
-        <Grid  container justify="center" spacing={spacing}>
+        <Grid  container justify="center" spacing={spacing} >
        
-        <br></br>
-          {[0, 1, 2,3,4,5,6,7].map((value) => (
+        
+          {[0, 1, 2,3,4,5,6,7,0, 1, 2,3,4,5,6,7,0, 1, 2,3,4,5,6,7].map((value) => (
             <Grid key={value} item >
-            <div className="ad">
-              <Paper  className="paper_4" elevation={10} style={{ backgroundColor: "#bdbdbd" }}  />
+            <div className="ad" >
+              <Paper  className="paper_4" elevation={10} style={{ backgroundColor: "gray" }}  />
               </div>
              
               
-            </Grid>
+            </Grid> 
           ))}
         </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <Paper >
-        
-          <Grid container>
-          
-            <Grid item>
-              
-              <RadioGroup
-                name="spacing"
-                aria-label="spacing"
-                value={spacing.toString()}
-                onChange={handleChange}
-                row
-              >
-              
-               
-              </RadioGroup>
-            </Grid>
-          </Grid>
-        </Paper>
-      </Grid>
-    </Grid>
-    <Grid container className={classes.root} spacing={2}>
-    <Grid item xs={12}>
     
-    
-      <Grid container justify="center" spacing={spacing}>
-     
-      <br></br>
-        {[0, 1, 2,3,4,5,6,7].map((value) => (
-          <Grid key={value} item>
-          
-            <Paper className="paper_4" elevation={10} style={{ backgroundColor: "#bdbdbd" }} />
-           
-           
-            
-          </Grid>
-        ))}
-      </Grid>
-    </Grid>
-    <Grid item xs={12}>
-      <Paper >
-      
-        <Grid container>
-        
-          <Grid item>
-            
-            <RadioGroup
-              name="spacing"
-              aria-label="spacing"
-              value={spacing.toString()}
-              onChange={handleChange}
-              row
-            >
-            
-             
-            </RadioGroup>
-          </Grid>
-        </Grid>
-      </Paper>
-    </Grid>
-  </Grid>
-  <Grid container className={classes.root} spacing={2}>
-  <Grid item xs={12}>
- 
-  
-    <Grid container justify="center" spacing={spacing}>
-   
-    <br></br>
-      {[0, 1, 2,3,4,5,6,7].map((value) => (
-        <Grid key={value} item>
-        
-          <Paper className="paper_4" elevation={10} style={{ backgroundColor: "#bdbdbd" }}  />
-         
-         
-          
-        </Grid>
-      ))}
-    </Grid>
-  </Grid>
-  <Grid item xs={12}>
-    <Paper >
-    
-      <Grid container>
-      
-        <Grid item>
-          
-          <RadioGroup
-            name="spacing"
-            aria-label="spacing"
-            value={spacing.toString()}
-            onChange={handleChange}
-            row
-          >
-          
-           
-          </RadioGroup>
-        </Grid>
-      </Grid>
-    </Paper>
-  </Grid>
+
 </Grid>
 
     </div>

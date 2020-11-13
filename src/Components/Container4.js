@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 export default function Container4() {
     return (
         <card>
-        <div className="container4">
+        <div className="container4" style={{ marginTop:"100px"}}>
         <div className="container">
         <div className="row">
        
@@ -19,7 +19,7 @@ export default function Container4() {
         <div className="col-md-6" >
         <div className="sub">
         
-        <TextField className="Rectangle-424"  label="Enroll your name" />
+        <input className="Rectangle-424"  placeholder="Enroll your name" />
         
         <button className="Rectangle-425">Subscribe</button>
         </div>
