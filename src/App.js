@@ -19,6 +19,7 @@ import  NavBar from './Components/NavBar';
 import Footer from './Components/Pages/Footer';
 import ProfileUpdate from './Components/ShoppingCart.js/ProfileUpdate';
 import NavBarBelow from './Components/ShoppingCart.js/NavBarBelow';
+import ProductSelect from './Components/ShoppingCart.js/Products/ProductListPage';
 const App = () => (
   <>
  
@@ -36,6 +37,7 @@ const App = () => (
 <Route  path="/shoponline" component={HomePage1}/>
 <Route  path="/paymentForm" component={PaymentForm}/>
 <Route  path="/ProfileUpdate" component={ProfileUpdate}/>
+<Route  path="/ProductSelect" component={ProductSelect}/>
 </div>
     
 </div>

@@ -62,7 +62,7 @@ const MenuItems = () => {
                 text: "HOME"
             },
             {
-                linkTo: "/Cart", 
+                linkTo: "/ProductSelect", 
                 text: "PRODUCTS"
             },
             {
@@ -100,37 +100,6 @@ const MenuItems = () => {
   ];
 
 
-
-// var navbar = {};
-// navbar.brand =  {
-//                     linkTo: "#", 
-//                     text: " Navbar"
-//                 };
-// navbar.links = [
-//         {
-//             linkTo: "#", 
-//             text: "Link 1"
-//         },
-//         {
-//             linkTo: "#", 
-//             text: "Link 2"
-//         },
-//         {
-//             dropdown: true, 
-//             text: "Dropdown", 
-//             links: [
-//                 {
-//                     linkTo: "#", 
-//                     text: "Dropdown Link 1"
-//                 },
-//                 {
-//                     linkTo: "#", 
-//                     text: "Dropdown Link 2", 
-//                     active: true
-//                 }
-//             ]
-//         }
-// ];
   return (
     <div >
    

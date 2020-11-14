@@ -12,6 +12,7 @@ import Profile from './../ShoppingCart.js/Profile';
 // import Payment from './Components/ShoppingCart.js/Payment';
 // import PrimarySearchAppBar from './Components/NavBar';
 import ProfileUpdate from './../ShoppingCart.js/ProfileUpdate';
+import ProductDetails from './../ShoppingCart.js/Products/ProductDetails'
 
 
 
@@ -28,6 +29,7 @@ const HomePage1 = () => (
   <Container3/><br></br>
   <Cardstwo/><br></br>
   <Container4/>
+  <ProductDetails/>
  
 
  
