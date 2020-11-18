@@ -7,11 +7,13 @@ export const CartProvider=({children})=>{
 const [cartItems,setCartItems]=useState([]);
 
 useEffect(()=>{
-    const data=localStorage.getItem('granitecart')
-    setCartItems(data?JSON.parse(data):[])
+    let data=localStorage.getItem('granitecart')
+    data=data?JSON.parse(data):[]
+    console.log(data)
+    //setCartItems(data)
 },[])
 const addItem=(item)=>{
-   const data1=[...cartItems]
+   let data1=[...cartItems]
     data1=(data1)=>{
         const itemexist=data1.find(item1=>item1.id==item.id)
         if(itemexist){
@@ -32,7 +34,7 @@ localStorage.setItem('granitecart',data1)
     
 }
 const removeItem=(item)=>{
-    const data=[...cartItems]
+    let data=[...cartItems]
     data=data.filter(data1=>data1.id!=item.id)
     setCartItems(data)
     localStorage.setItem('granitecart',data) 
