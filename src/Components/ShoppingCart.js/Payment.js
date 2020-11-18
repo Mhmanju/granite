@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from "@material-ui/core/InputBase";
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import {Link} from "react-router-dom";
+import {Link, useHistory, useLocation, useParams} from "react-router-dom";
 import SideLeft from './Side_Left';
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Payment() {
   const classes = useStyles();
+  const {data}=useLocation();
   
-
   return (
       <div className="Cart" style={{ marginTop:"50px" }}>
     
@@ -72,7 +72,7 @@ export default function Payment() {
         </Grid>
         
        
-        {[0, 1, 2,3].map((value) => (
+        {(data||[]).map((value) => (
         <div className="side_right">
        
         <div className={classes.root}>
@@ -82,7 +82,7 @@ export default function Payment() {
         <CartList/>        
         </Grid>
         <Grid item xs={8}>
-         <PaymentDiscription/>
+         <PaymentDiscription {...value}/>
         </Grid>
         
         </Grid>

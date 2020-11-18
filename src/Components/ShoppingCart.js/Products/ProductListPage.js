@@ -10,6 +10,7 @@ import {
   TextField
 } from "@material-ui/core";
 import {useCart} from '../../../hooks/useCart'
+import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -99,27 +100,35 @@ export default function SlabsCard() {
               <Button
                 color="secondary"
                 variant="contained"
+                style={{ backgroundColor:"gold" ,color:"black" }} 
                 size="small"
                 className={classes.button}
                 onClick={()=>addItem({id:index,...item})}
               >
                 Add Cart
               </Button>
+              
               <Button
+              
                 color="secondary"
                 variant="contained"
                 size="small"
                 className={classes.button}
                 style={{ backgroundColor:"gold" ,color:"black" }} >
-                Buy Now
+                  <Link to={{pathname:'/payment',data:[{id:index,...item}]}}> Buy Now</Link>
+               
               </Button>
+              
               <Button
                 color="secondary"
                 variant="contained"
                 size="small"
                 className={classes.button}
-                style={{ backgroundColor:"gold",color:"black"  }} >
+                style={{ backgroundColor:"gold",color:"black"  }} 
+                >
+                  <Link to={'/ProductDetailPage/'+item?.title}>
                 Know More
+                </Link>
               </Button>
             </Box>
           </Box>

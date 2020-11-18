@@ -29,13 +29,13 @@ const App = () => (
  <div className="app_container">
 <Route exact path="/" component={HomePage1}/>
 <Route  path="/Cart" component={CenteredGrid}/>
-<Route  path="/Payment" component={Payment}/>
+<Route  path="/payment" component={Payment}/>
 <Route  path="/profile" component={Profile}/>
 <Route  path="/shoponline" component={HomePage1}/>
 <Route  path="/paymentForm" component={PaymentForm}/>
 <Route  path="/ProfileUpdate" component={ProfileUpdate}/>
 <Route  path="/ProductSelect" component={ProductSelect}/>
-<Route  path="/ProductDetailPage" component={ProductDetails}/>
+<Route  path="/ProductDetailPage/:id" component={ProductDetails}/>
 <Route  path="/Suppliers" component={Suppliers}/>
 
 

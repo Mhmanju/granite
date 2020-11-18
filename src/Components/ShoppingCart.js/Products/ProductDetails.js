@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Productcontainer from './productContainerRight';
 import Button from '@material-ui/core/Button';
-import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-router-dom';
 import ProductDetailsLeft from './ProductLeft';
 import ProductDown from './ProductDown';
 const useStyles = makeStyles((theme) => ({
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ProductDetails() {
   const classes = useStyles();
- 
-
+ const {id}=useParams();
+console.log(id)
   return (
     
       <div className="Cart" style={{ marginTop:"50px" }}>
@@ -37,7 +37,7 @@ export default function ProductDetails() {
         </Grid>
       
         <Grid  item xs={7}>
-        <p className="MY-Shopping-CART">MY Shopping CART</p>
+  <p className="MY-Shopping-CART">{id}</p>
         {[0].map((value) => (
         <div className="Product_side_right">
             <Productcontainer/>

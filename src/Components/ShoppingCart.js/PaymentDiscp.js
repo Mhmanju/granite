@@ -10,19 +10,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PaymentDiscription() {
+export default function PaymentDiscription({id,title,qty,amount}) {
   const classes = useStyles();
 
   return (
       <div className="Disp">
 
-     <p className="Adoni-Brown-Grooved">Adoni Brown Grooved</p>
+  <p className="Adoni-Brown-Grooved">{title}</p>
    
 
     <Grid container spacing={2}>
     <Grid item xs={6} sm={6}>
-    <p><b style={{ color:"black" }}>Quantity:</b> 140 CARTONS </p>
-    <p><b style={{ color:"black" }}>AMOUNT :</b> 000000000000000 </p>
+    <p><b style={{ color:"black" }}>Quantity:</b> {qty} CARTONS </p>
+    <p><b style={{ color:"black" }}>AMOUNT :</b> {amount} </p>
     </Grid>
 
     <Grid item xs={6} sm={6}>
@@ -31,8 +31,6 @@ export default function PaymentDiscription() {
   </Button>
     </Grid>
     </Grid>
-
-
       </div>
 
   );
