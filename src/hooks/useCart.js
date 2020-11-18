@@ -7,17 +7,23 @@ export const CartProvider=({children})=>{
 const [cartItems,setCartItems]=useState([]);
 
 useEffect(()=>{
-    let data=localStorage.getItem('granitecart')
-    data=data?JSON.parse(data):[]
-    console.log(data)
-    //setCartItems(data)
+     let data=localStorage.getItem('granitecart')
+     try{
+     if(data ){data=JSON.parse(data)}
+     else {data=[]}
+     setCartItems(data)
+    }catch(e){
+data=[];
+setCartItems(data)
+    }
+
 },[])
 const addItem=(item)=>{
    let data1=[...cartItems]
-    data1=(data1)=>{
+    
         const itemexist=data1.find(item1=>item1.id==item.id)
         if(itemexist){
-          return  data1.map(item1=>{
+          data1= data1.map(item1=>{
                 if(item1.id==item.id){
                   return  {...item1,qty:Number(item1.qty)+(Number(item.qty)||1),amount:Number(item1.amount)+(Number(item.amount))}
                 }
@@ -27,17 +33,18 @@ const addItem=(item)=>{
                
                 )
         }
-        else{return [...data1,{...item,qty:1}]}        
-    }
-       setCartItems(data1)
-localStorage.setItem('granitecart',data1)   
+        else{data1=[...data1,{...item,qty:1}]}        
     
+       setCartItems(data1)
+      
+localStorage.setItem('granitecart',JSON.stringify(data1))   
+   
 }
 const removeItem=(item)=>{
     let data=[...cartItems]
     data=data.filter(data1=>data1.id!=item.id)
     setCartItems(data)
-    localStorage.setItem('granitecart',data) 
+    localStorage.setItem('granitecart',JSON.stringify(data)) 
 }    
   
 const {qty,totalAmount}=cartItems.reduce((acc,item)=>{
