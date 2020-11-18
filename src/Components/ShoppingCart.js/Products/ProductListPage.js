@@ -3,8 +3,7 @@ import {
   Avatar,
   Box,
   Button,
-  InputBase,
-  Container,
+  
   Grid,
   makeStyles,
   Paper,
@@ -80,6 +79,7 @@ export default function SlabsCard() {
         variant="outlined"
         className={classes.search}
       />
+      
       <div className={classes.slb}>Slabs</div>
       <Grid container maxWidth="lg">
         {
@@ -110,7 +110,7 @@ export default function SlabsCard() {
                 variant="contained"
                 size="small"
                 className={classes.button}
-              >
+                style={{ backgroundColor:"gold" ,color:"black" }} >
                 Buy Now
               </Button>
               <Button
@@ -118,7 +118,7 @@ export default function SlabsCard() {
                 variant="contained"
                 size="small"
                 className={classes.button}
-              >
+                style={{ backgroundColor:"gold",color:"black"  }} >
                 Know More
               </Button>
             </Box>

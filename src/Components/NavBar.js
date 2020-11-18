@@ -15,6 +15,7 @@ import {Link, useHistory} from "react-router-dom";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { useCart } from "../hooks/useCart";
 
+import logo from './../Assets/images/logo.png' 
 const useStyles = makeStyles((theme) => ({
   fix: theme.mixins.toolbar,
   root: {
@@ -43,7 +44,7 @@ export default (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <img src={props.logo} alt="logo" className={classes.logo} />
+         <Link to="/"> <img src={logo} alt="logo" className={classes.logo} /></Link>
           <Box flexGrow="1" />
           <MenuItems />
           <User />
@@ -67,11 +68,11 @@ const MenuItems = () => {
                 text: "PRODUCTS"
             },
             {
-              linkTo: "/Cart", 
+              linkTo: "/Suppliers", 
               text: "SUPPLIERS"
           },
           {
-              linkTo: "/", 
+              linkTo: "/ProductDetailPage", 
               text: "STONE LIBRARY"
           },
           {
@@ -111,7 +112,8 @@ const MenuItems = () => {
           borderRight:"3px solid white",
           paddingRight:"10px",
           paddingLeft:"10px",
-          color:"white"  }}>
+          color:"white",
+          textDecoration: "none" }}>
     {item.text}
     </Link>
     ))}
@@ -128,6 +130,6 @@ const User = () => {
           <ShoppingCartRoundedIcon color="primary" />
         </Avatar>
       </Badge>
-    </Box>
+    </Box> 
   );
 };

@@ -7,8 +7,7 @@ import Checkboxes from './../ShoppingCart.js/Checkbox';
 import Discription from './../ShoppingCart.js/Disp';
 import Button from '@material-ui/core/Button';
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Routers from './../Router/Router';
-import Payment from './../ShoppingCart.js/Payment';
+
 import SideLeft from './../ShoppingCart.js/Side_Left';
 import { useCart } from '../../hooks/useCart';
 const useStyles = makeStyles((theme) => ({

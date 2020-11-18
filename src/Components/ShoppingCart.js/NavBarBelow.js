@@ -2,14 +2,13 @@ import {
     Box,
     InputBase,
     makeStyles,
-    Toolbar,
+ 
     Typography
   } from "@material-ui/core";
-  import { FilterNone, SearchRounded } from "@material-ui/icons";
+  import {  SearchRounded } from "@material-ui/icons";
   import React from "react";
   import Login from "./../Pages/Login";
   import {Link} from 'react-router-dom';
-  import AllDrop from './AllDropdown';
   import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
   const useStyles = makeStyles((theme) => ({
@@ -75,9 +74,9 @@ import {
         <div><Login /></div>
         
     
-       <Link to="/Profile"><Typography   style={{ color:"white" }}>PROFILE <ArrowDropDownIcon  /></Typography></Link> 
-       <Link to="/Cart"><Typography style={{ color:"white" }}>ORDERS<ArrowDropDownIcon/></Typography></Link>
-       <Link to="/"><Typography style={{ color:"white" }}>RETURNS&REFUNDS<ArrowDropDownIcon/></Typography></Link>
+       <Link to="/Profile" style={{ textDecoration: "none" }}><Typography   style={{ color:"white" }}>PROFILE <ArrowDropDownIcon  /></Typography></Link> 
+       <Link to="/Cart"  style={{ textDecoration: "none" }}><Typography style={{ color:"white",textDecoration: "none" }}>ORDERS<ArrowDropDownIcon/></Typography></Link>
+       <Link to="/"  style={{ textDecoration: "none" }}><Typography style={{ color:"white",textDecoration: "none" }}>RETURNS&REFUNDS<ArrowDropDownIcon/></Typography></Link>
       </Box>
     );
   };
