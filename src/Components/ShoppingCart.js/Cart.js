@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import CartList from './../ShoppingCart.js/CartList'
@@ -10,6 +10,7 @@ import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Routers from './../Router/Router';
 import Payment from './../ShoppingCart.js/Payment';
 import SideLeft from './../ShoppingCart.js/Side_Left';
+import { useCart } from '../../hooks/useCart';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CenteredGrid() {
   const classes = useStyles();
- 
+ const {cartItems}=useCart();
 
   return (
     
@@ -40,7 +41,7 @@ export default function CenteredGrid() {
       
         <Grid  item xs={8}>
         <p className="MY-Shopping-CART">MY Shopping CART</p>
-        {[0, 1, 2,3].map((value) => (
+        {cartItems?.map((value) => (
         <div className="side_right">
    
        
@@ -53,7 +54,7 @@ export default function CenteredGrid() {
         <CartList/>        
         </Grid>
         <Grid item xs={7}>
-         <Discription/>
+         <Discription {...value}/>
         </Grid>
         
         </Grid>

@@ -2,7 +2,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 
 import ProductDown from './ProductDown';

@@ -11,8 +11,9 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { useCart } from "../hooks/useCart";
 
 const useStyles = makeStyles((theme) => ({
   fix: theme.mixins.toolbar,
@@ -118,9 +119,11 @@ const MenuItems = () => {
   );
 }
 const User = () => {
+  const {qty}=useCart()
+  const history=useHistory();
   return (
-    <Box marginLeft="15px">
-      <Badge badgeContent={4} color="secondary">
+    <Box marginLeft="15px" onClick={()=>history.push('/cart')}>
+      <Badge badgeContent={qty} color="secondary">
         <Avatar>
           <ShoppingCartRoundedIcon color="primary" />
         </Avatar>
