@@ -1,14 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import CartList from './../ShoppingCart.js/CartList'
 import Checkboxes from './../ShoppingCart.js/Checkbox';
 import Discription from './../ShoppingCart.js/Disp';
 import Button from '@material-ui/core/Button';
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Routers from './../Router/Router';
-import Payment from './../ShoppingCart.js/Payment';
+
 import SideLeft from './../ShoppingCart.js/Side_Left';
 const useStyles = makeStyles((theme) => ({
   root: {

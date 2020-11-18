@@ -1,16 +1,11 @@
 
 import React, { Component } from 'react'  
 import './App.css';
-import BootstrapCarousel from './Components/Carosal'
-import Album from './Components/album';
-import Cardstwo from './Components/Cards';
-import Container3 from './Components/Container3';
-import Container4 from './Components/Container4';
-import Cart from './Components/ShoppingCart.js/Cart';
+
 import Payment from './Components/ShoppingCart.js/Payment';
 // import PrimarySearchAppBar from './Components/NavBar';
 import Profile from './Components/ShoppingCart.js/Profile';
-import Routers from './Components/Router/Router';
+
 import {BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import CenteredGrid from './Components/ShoppingCart.js/Cart';
 import HomePage1 from './Components/Pages/Home';
@@ -20,6 +15,8 @@ import Footer from './Components/Pages/Footer';
 import ProfileUpdate from './Components/ShoppingCart.js/ProfileUpdate';
 import NavBarBelow from './Components/ShoppingCart.js/NavBarBelow';
 import ProductSelect from './Components/ShoppingCart.js/Products/ProductListPage';
+import ProductDetails from './Components/ShoppingCart.js/Products/ProductDetails';
+import Suppliers from './Components/ShoppingCart.js/Suppliers/Suppliers';
 const App = () => (
   <>
  
@@ -38,6 +35,10 @@ const App = () => (
 <Route  path="/paymentForm" component={PaymentForm}/>
 <Route  path="/ProfileUpdate" component={ProfileUpdate}/>
 <Route  path="/ProductSelect" component={ProductSelect}/>
+<Route  path="/ProductDetailPage" component={ProductDetails}/>
+<Route  path="/Suppliers" component={Suppliers}/>
+
+
 </div>
     
 </div>

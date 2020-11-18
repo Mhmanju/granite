@@ -13,7 +13,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
 import {Link} from "react-router-dom";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
+import logo from './../Assets/images/logo.png' 
 const useStyles = makeStyles((theme) => ({
   fix: theme.mixins.toolbar,
   root: {
@@ -42,7 +42,7 @@ export default (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <img src={props.logo} alt="logo" className={classes.logo} />
+         <Link to="/"> <img src={logo} alt="logo" className={classes.logo} /></Link>
           <Box flexGrow="1" />
           <MenuItems />
           <User />
@@ -66,11 +66,11 @@ const MenuItems = () => {
                 text: "PRODUCTS"
             },
             {
-              linkTo: "/Cart", 
+              linkTo: "/Suppliers", 
               text: "SUPPLIERS"
           },
           {
-              linkTo: "/", 
+              linkTo: "/ProductDetailPage", 
               text: "STONE LIBRARY"
           },
           {
@@ -110,7 +110,8 @@ const MenuItems = () => {
           borderRight:"3px solid white",
           paddingRight:"10px",
           paddingLeft:"10px",
-          color:"white"  }}>
+          color:"white",
+          textDecoration: "none" }}>
     {item.text}
     </Link>
     ))}
@@ -119,12 +120,12 @@ const MenuItems = () => {
 }
 const User = () => {
   return (
-    <Box marginLeft="15px">
+  <Link to="/Cart">  <Box marginLeft="15px">
       <Badge badgeContent={4} color="secondary">
         <Avatar>
           <ShoppingCartRoundedIcon color="primary" />
         </Avatar>
       </Badge>
-    </Box>
+    </Box> </Link>
   );
 };

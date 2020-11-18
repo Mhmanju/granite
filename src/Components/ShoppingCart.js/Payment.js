@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+
 import Grid from '@material-ui/core/Grid';
 import CartList from './../ShoppingCart.js/CartList'
-import Checkboxes from './../ShoppingCart.js/Checkbox';
+
 import PaymentDiscription from './../ShoppingCart.js/PaymentDiscp';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
@@ -31,7 +31,7 @@ export default function Payment() {
       <div className="Cart" style={{ marginTop:"50px" }}>
     
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
        
         <Grid item xs={4}>
       <SideLeft/>
@@ -39,18 +39,18 @@ export default function Payment() {
        
         <Grid  item xs={8}>
         <p className="MY-Shopping-CART">PAYMENT</p>
-        <Grid container spacing={4}>
-       
+        <Grid container spacing={1}>
+      
         <Grid item xs={4} style={{ 
            height: '100%', justifyContent: "center",
-          alignItems: "center"}}>
-        <p className="" style={{}}>Select Payment Gateway:</p>       
+          alignItems: "center" }}>
+        <p className="" style={{}}>Select Payment Gateway:</p>
         </Grid>
         <Grid item xs={7} style={{  display: "flex",
           justifyContent: "center",
-          alignItems: "center" }}>
-         
-      
+          alignItems: "center" }}> 
+          
+        
         
         <InputBase className="PaymentSearch"
           placeholder="Search…"
@@ -61,7 +61,10 @@ export default function Payment() {
           }}
           
           inputProps={{ 'aria-label': 'search' }}
-          endAdornment={<ArrowDropDownIcon />} >
+          endAdornment={<ArrowDropDownIcon />} 
+          style={{ display: "flex", 
+          justifyContent: "center",
+          alignItems: "center"}} >
          </InputBase>
      
         </Grid>

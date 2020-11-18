@@ -15,6 +15,7 @@ import {
   Toolbar,
   Typography
 } from "@material-ui/core";
+import logo from './../../Assets/images/logo.png'
 const useStyles = makeStyles((theme) => ({
   fix: theme.mixins.toolbar,
   root: {
@@ -26,7 +27,7 @@ export default (props) => {
   const classes = useStyles();
   return (
     <Box className={classes.root} style={{ borderTop:"6px solid #fbc936",backgroundColor:"Black" }}>
-      <Footer1 logo={props.logo} />
+      <Footer1 logo={logo} />
       <hr />
       <Footer2 />
     </Box>
