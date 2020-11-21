@@ -170,7 +170,7 @@ export default function Payment() {
    <div className="">
   
         <p className="Total-Amount-Rs-0000000000" style={{ marginLeft:"auto",marginRight:"auto",marginTop:"50px" }}><b>Total Amount :  Rs {amount}</b></p> </div>
-  { customer && <Button onClick={()=>onSubmit()} className="Path-890" variant="contained" color="#ffeb3b" style={{ backgroundColor:"#ffc107",marginLeft:"500px",marginRight:"auto"}}>
+  { customer&& amount && <Button onClick={()=>onSubmit()} className="Path-890" variant="contained" color="#ffeb3b" style={{ backgroundColor:"#ffc107",marginLeft:"500px",marginRight:"auto"}}>
     <b>PAY NOW</b>
   </Button>}
 
