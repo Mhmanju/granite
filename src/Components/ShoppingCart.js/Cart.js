@@ -64,7 +64,7 @@ const [checked, setChecked] = React.useState(true);
         <Checkboxes handleChange={(e)=>handleChange(e,value)}/>        
         </Grid>
         <Grid item xs={4}>
-        <CartList/>        
+        <CartList productImage={value?.productImage}/>        
         </Grid>
         <Grid item xs={7}>
          <Discription {...value}/>

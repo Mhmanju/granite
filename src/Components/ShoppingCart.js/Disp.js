@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 
 import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
@@ -11,13 +11,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Discription({id,title,qty,amount}) {
+export default function Discription({id,productName,qty,amount}) {
   const classes = useStyles();
   const {removeItem}=useCart();
   return (
       <div className="Disp">
 
-  <p className="Adoni-Brown-Grooved">{title}</p>
+  <h3>{productName}</h3>
+  <Box my={1}/>
     <p><b style={{ color:"black" }}>Quantity:</b> {qty} CARTONS </p>
     <p><b style={{ color:"black" }}>AMOUNT :</b> {amount} </p>
 

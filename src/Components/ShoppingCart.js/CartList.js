@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { Avatar, makeStyles } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
@@ -12,15 +12,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CartList() {
+export default function CartList({productImage}) {
   const classes = useStyles();
 
   return (
       <div className="CartBox">
     <div className={classes.root}>
-     
-   
-      <Paper  elevation={3} />
+     <Avatar variant='square' style={{height:'100%',width:'100%'}}src={productImage}></Avatar>
       </div>
     </div>
   );

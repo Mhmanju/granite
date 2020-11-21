@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import {BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-router-dom';
 import ProductDetailsLeft from './ProductLeft';
 import ProductDown from './ProductDown';
+import { useFetch } from '../../../hooks/useFetch';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -21,50 +22,62 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ProductDetails() {
+  const {id}=useParams();
   const classes = useStyles();
- const {id}=useParams();
-console.log(id)
+ const {data,loading,error}=useFetch('product/'+id);
+ if(loading){
+  return <h1>Loading...</h1>
+}
+if(error){
+  return <h2>{"error"}</h2>
+}
+if(data){
   return (
     
-      <div className="Cart" style={{ marginTop:"50px" }}>
+    <div className="Cart" style={{ marginTop:"50px" }}>
+  
+  <div className={classes.root}>
+    <Grid container spacing={4}>
     
-    <div className={classes.root}>
-      <Grid container spacing={4}>
-      
-       
-        <Grid item xs={5}>
-     <ProductDetailsLeft/>
-        </Grid>
-      
-        <Grid  item xs={7}>
-  <p className="MY-Shopping-CART">{id}</p>
-        {[0].map((value) => (
-        <div className="Product_side_right">
-            <Productcontainer/>
-      
-          
-        
-        </div>
-
-
      
-
-     
-        
-        ))}
-       
-       </Grid>
-     
-       
+      <Grid item xs={5}>
+   <ProductDetailsLeft data={data}/>
       </Grid>
-     
+    
+      <Grid  item xs={7}>
+<h3  style={{wra:'nowrap'}}>{data.productName}</h3>
+      {[0].map((value) => (
+      <div className="Product_side_right">
+          <Productcontainer data={data}/>
+    
+        
       
+      </div>
 
 
-    </div>
-    <ProductDown/>
+   
+
+   
+      
+      ))}
+     
+     </Grid>
+   
+     
+    </Grid>
+   
     
-    </div>
-    
-  );
+
+
+  </div>
+  <ProductDown data={data}/>
+  
+  </div>
+  
+);
+}
+else{
+  return <></>
+}
+  
 }

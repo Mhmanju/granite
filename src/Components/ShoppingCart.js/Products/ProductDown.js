@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 
 import Button from '@material-ui/core/Button';
@@ -8,6 +8,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import { useCart } from '../../../hooks/useCart';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,9 +17,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ProductDown() {
+export default function ProductDown({data}) {
   const classes = useStyles();
-
+  const {addItem}=useCart();
+  const [qty,setQty]=useState(1);
   return (
       <div className="" >
 
@@ -27,7 +29,7 @@ export default function ProductDown() {
 <Grid container spacing={4}>
       <Grid item xs={4} >
       
-      <p className=""><b>Quntity</b> <input className=""  placeholder=""    style={{ marginLeft:"5px" }} /></p>
+      <p className=""><b>Quntity</b> <input className=""  placeholder="" value={qty}    style={{ marginLeft:"5px" }} onChange={(e)=>setQty(e.target.value)}/></p>
        
         
        
@@ -62,6 +64,7 @@ export default function ProductDown() {
                 variant="contained"
                 size="small"
                 className={classes.button}
+                onClick={()=>addItem({...data,qty:qty})}
               style={{ backgroundColor:"gold" }}>
               <b> ADD TO CART</b>
               </Button>
@@ -69,10 +72,6 @@ export default function ProductDown() {
       </Grid>
       </Grid>
       </Grid>
-   
-  
-
-
       </div>
 
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core';
+import { Avatar, makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 
 import ProductDown from './ProductDown';
@@ -43,7 +43,7 @@ function getModalStyle() {
 }
 
 
-export default function Variants(props) {
+export default function Variants({data,...props}) {
   const classes = useStyles();
   
 // getModalStyle is not a pure function, we roll the style only on the first render
@@ -60,7 +60,7 @@ const handleClose = () => {
 
 const body = (
   <div style={modalStyle} className={classes.paper}>
-   <img src="https://tse4.mm.bing.net/th?id=OIP.PWg7-OCi85cdoV_VJjFMtgHaHa&pid=Api&P=0&w=300&h=300" style={{ }}/>
+   <Avatar src={data?.productImage} style={{ }}/>
  
   </div>
 );
@@ -69,7 +69,7 @@ const body = (
   return (
 <div>
     <div className={classes.root}>
-      <Paper variant="outlined" onClick={handleOpen} ><img src="https://tse4.mm.bing.net/th?id=OIP.PWg7-OCi85cdoV_VJjFMtgHaHa&pid=Api&P=0&w=300&h=300" style={{ minWidth:"100%",height:"100%"}}/></Paper>
+      <Paper variant="outlined" onClick={handleOpen} ><Avatar variant='square' src={data.productImage} style={{ minWidth:"100%",height:"100%"}}/></Paper>
     
   
   </div>
@@ -83,12 +83,7 @@ const body = (
       </Modal>
   
   <div style={{ marginBottum:"200px"}}>
-  <p>Black Marquino Granite is exclusively used in commercial as well as residential establishment. It can be used in interior and exterior application. Black Marquino Granite gives stunning appearance to the interior of house. Primary color of Black Marquino Granite is black with white or grey colour pattern on it. This granite is also used for decoration purpose.</p>
-
-  <p>Black Marquino Granite is available as slab and tiles for clients. Thickness of slab is approximately 15mm to 20mm. Tiles are available in size of 1x1 and 2x2. Black Marquino Granite is also known as black marquina Granite. Size and thickness may vary according to the client’s requirement.</p>
-
-  <p>GraniMart is largest supplier and manufacturer of Black Marquino Granite slab and tiles in India overseas at lowest price.</p>
-
+  <p style={{textAlign:'justify',lineHeight:'2'}}>{data.details}</p>
   <p>Features</p>
   <p>Ideal for flooring and kitchen countertop</p>
   <p>Available as slab and Tiles</p>

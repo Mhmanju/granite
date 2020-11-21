@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { makeStyles,Grid } from '@material-ui/core';
+import { makeStyles,Grid, Avatar } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ProductDetailsLeft() {
+export default function ProductDetailsLeft({data}) {
   const classes = useStyles();
   const [URL] = React.useState(1);
   
@@ -24,7 +24,7 @@ export default function ProductDetailsLeft() {
       <div>
     <div className={classes.root} justify-content="center" style={{ marginTop:"50px" }} >
       
-      <MenuImages/>
+      <MenuImages data={data}/>
      
 
     </div  >
@@ -33,7 +33,7 @@ export default function ProductDetailsLeft() {
     <p>stars</p>
 
     <p><b>PRICE</b></p>
-    <p>120/ square feet</p>
+    <p>{data.amount}/ square feet</p>
 
     
 
@@ -62,8 +62,8 @@ function ProductImage(URL) {
   
 
 
-const MenuImages = () => {
-  const data = [   
+const MenuImages = ({data}) => {
+  const data1 = [   
     
     
             {
@@ -89,12 +89,12 @@ const MenuImages = () => {
     <Grid container spacing={4}>
     
     
-      {data.map((item) => (
+      {data1.map((item) => (
           <Grid item xs={4}>
          
-  <img src={item.URL} style={{ maxWidth:"90%",height:"166px"}} onClick={ProductImage}>
+  <img variant='square' src={data?.productImage} style={{ maxWidth:"90%",height:"166px"}} onClick={ProductImage}/>
 
-    </img> 
+    
     </Grid>
 
     ))}
