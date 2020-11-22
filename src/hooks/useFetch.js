@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-const baseurl="http://gmodicum-env.eba-pswsmftk.ap-south-1.elasticbeanstalk.com/"
+const baseurl="https://cors-anywhere.herokuapp.com/http://gmodicum-env.eba-pswsmftk.ap-south-1.elasticbeanstalk.com/"
 export const useFetch=(url)=>{
 const [data,setData]=useState(null);
 const [loading,setLoading]=useState(false);
