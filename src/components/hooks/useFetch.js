@@ -5,7 +5,7 @@ export const useFetch=(url)=>{
 const [data,setData]=useState(null);
 const [loading,setLoading]=useState(false);
 const [error,setError]=useState(null);
-const baseurl='./data/'
+const baseurl='http://mhmanju.github.io/granite/'
 useEffect(async()=>{
     try{
         setLoading(true)
