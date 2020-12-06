@@ -24,3 +24,15 @@ body {
   text-align: center;
   color: #fef3e1;
 }
+a{
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  height:3px;
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+ ::-webkit-scrollbar-thumb {
+  background: #c0c000;
+} 

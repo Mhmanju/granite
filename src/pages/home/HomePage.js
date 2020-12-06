@@ -1,9 +1,11 @@
-import { Avatar, Container, Fab, makeStyles } from "@material-ui/core";
-import { NoEncryption } from "@material-ui/icons";
+import { Avatar, Container, Fab, Hidden, makeStyles } from "@material-ui/core";
 
 import React from "react";
 import MyCarosal from "../../components/home/MyCarosal";
 import myimage from "../images/sunbscribe.png";
+import image1 from '../images/image1.png'
+import image2 from '../images/image2.png'
+import image3 from '../images/image3.png'
 const useStyles = makeStyles((theme) => ({
   carosal1: {
     marginTop: "53px",
@@ -15,8 +17,9 @@ export default () => {
   const classes = useStyles();
   return (
     <>
-      <MyCarosal className={classes.carosal1} />
-      <MyCarosal />
+      <MyCarosal className={classes.carosal1} image1={image1} image2={image2} image3={image3}
+        />
+      <MyCarosal image1={image1} image2={image2} image3={image3}/>
       <MyGrid/>
       <Chooseus/>
        <ProductsToday/>
@@ -26,7 +29,7 @@ export default () => {
 };
 
  const MyGrid=()=>{
-   return(<div style={{display:'grid',gridTemplateColumns:'repeat(8,131px)',gridGap:'27px',marginTop:'88px'}}>
+   return(<div style={{display:'grid',gridTemplateColumns:'repeat(8,131px)',gridGap:'27px',marginTop:'88px',overflow:'auto'}}>
 {
   Array(24).fill(10).map(item=><div style={{height:'224px',backgroundColor:'#d8d8d8'}}></div>)
  }
@@ -49,7 +52,7 @@ export default () => {
   }
    return(<div>
      <p style={style}>Why should you choose us?</p>
-     <div style={{display:'flex',justifyContent:'space-between'}}>
+     <div style={{display:'flex',justifyContent:'space-between',overflow:'auto',gap:'20px'}}>
       <ContactUsDetail image={'h'} title={"Xxxxxxxxx. Xxxxx"} detail={'All purchases over $399 are eligible for free shipping via UPS Pack and Ship.'}/>
       <ContactUsDetail image={'h'} title={"Xxxxxxxxx. Xxxxx"} detail={'All purchases over $399 are eligible for free shipping via UPS Pack and Ship.'}/>
       <ContactUsDetail image={'h'} title={"Xxxxxxxxx. Xxxxx"} detail={"If an item arrived damaged or you've changed your mind, you can send it back for a full refund."}/>
@@ -59,7 +62,7 @@ export default () => {
  }
 
  const ContactUsDetail=({image,title,detail})=>{
-   return(<div style={{width:'230px'}}>
+   return(<div style={{minWidth:'230px'}}>
      <Avatar variant='square' colo=''>{image}</Avatar>
      <b style={{display:'block',paddingTop:'43px'}}>{title}</b>
      <small style={{display:'block',paddingTop:'20px',lineHeight:'24px'}}>{detail}</small>
@@ -70,7 +73,7 @@ export default () => {
    return(<div style={{textAlign:'center'}}>
   
     <center> <div  className={'Rectangle-762'}><p className='Products-in-today'>Products in today</p></div></center>
-   <div style={{display:'flex',justifyContent:'space-between',marginTop:'78px'}}>
+   <div style={{display:'flex',justifyContent:'space-between',marginTop:'78px',overflow:'auto',gap:'20px'}}>
      <ProductCard/>
      <ProductCard/>
      <ProductCard/>
@@ -80,7 +83,7 @@ export default () => {
  }
 
  const ProductCard=()=>{
-   return(<div style={{borderTop:'11px solid black',width:'272px',height:'300px'}}>
+   return(<div style={{borderTop:'11px solid black',minWidth:'272px',height:'300px'}}>
      <div style={{height:'245px',backgroundColor:'#f0f0f0'}}></div>
      <div style={{backgroundColor:'black',color:'white',height:'47px'}}>text</div>
    </div>)
@@ -88,7 +91,9 @@ export default () => {
 
  const Subcribe=()=>{
    
-  return (<div style={{height:'243px',marginTop:'139px',marginBottom:'91px',backgroundImage:`url(${myimage})`,display:'flex',alignItems:'center',justifyContent:'space-around'}}>
+  return (
+  <Hidden smDown>
+  <div style={{height:'243px',marginTop:'139px',width:'100%',marginBottom:'91px',backgroundImage:`url(${myimage})`,display:'flex',alignItems:'center',justifyContent:'space-around',gap:'20px',overflow:'auto'}}>
 <p style={{width:'40%',fontSize:'29px',lineHeight:1.31,color:"white"}}>Subscribe to our newsletter and
 receive exclusive offers every week</p>
 <div>
@@ -103,5 +108,6 @@ receive exclusive offers every week</p>
   subscribe
 </Fab>
 </div>
-     </div>)
+     </div>
+     </Hidden>)
  }

@@ -1,3 +1,4 @@
+import { Avatar } from "@material-ui/core";
 import React from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
@@ -6,11 +7,11 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   root: {
-    position: "relative"
+    position: "relative",
   },
   slide: {
-    padding: 15,
-    minHeight: 260,
+   // padding: 15,
+    height: 260,
     color: "#fff"
   },
   slide1: {
@@ -37,22 +38,22 @@ class DemoAutoPlay extends React.Component {
 
   render() {
     const { index } = this.state;
-    const { className } = this.props;
+    const { className,image1,image2,image3 } = this.props;
     return (
       <div style={styles.root} className={className}>
         <AutoPlaySwipeableViews
           index={index}
           onChangeIndex={this.handleChangeIndex}
         >
-          <div style={Object.assign({}, styles.slide, styles.slide1)}>
-            slide n°1
-          </div>
-          <div style={Object.assign({}, styles.slide, styles.slide2)}>
-            slide n°2
-          </div>
-          <div style={Object.assign({}, styles.slide, styles.slide3)}>
-            slide n°3
-          </div>
+          <div style={styles.slide}>
+            <Avatar src={image1} variant='square' style={{height:'100%',width:'100%',objectFit:'contain'}}/>
+            </div>
+            <div style={styles.slide}>
+            <Avatar src={image2} variant='square' style={{height:'100%',width:'100%',objectFit:'cover'}}/>
+            </div>
+            <div style={styles.slide}>
+            <Avatar src={image3} variant='square' style={{height:'100%',width:'100%',objectFit:'contain'}}/>
+            </div>
         </AutoPlaySwipeableViews>
       </div>
     );

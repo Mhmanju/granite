@@ -6,7 +6,11 @@ import {
   Typography
 } from "@material-ui/core";
 import { FilterNone, SearchRounded } from "@material-ui/icons";
-import React from "react";
+import React, { useState } from "react";
+import RegisterForm from "../forms/RegisterForm";
+import PopUp from "../PopUp";
+import LoginForm from '../forms/LoginForm'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -58,6 +62,8 @@ const SearchBar = ({ classes }) => {
 };
 
 const MenuItems = () => {
+  const [isRegisterOpen,setRegisterOpen]=useState(false)
+  const [isLoginOpen,setLoginOpen]=useState(false)
   return (
     <Box
       display="flex"
@@ -65,10 +71,16 @@ const MenuItems = () => {
       color="white"
       justifyContent="space-around"
     >
-      <Typography variant="subtitle2">LOGIN|REGISTER</Typography>
+      <Typography variant="subtitle2" ><span style={{cursor:'pointer'}} onClick={()=>setLoginOpen(true)}>LOGIN</span>|<span style={{cursor:'pointer'}} onClick={()=>setRegisterOpen(true)}>REGISTER</span></Typography>
       <Typography variant="subtitle2">PROFILE</Typography>
       <Typography variant="subtitle2">ORDERS</Typography>
       <Typography variant="subtitle2">RETURNS&REFUNDS</Typography>
+      <PopUp open={isRegisterOpen} handleClose={()=>setRegisterOpen(false)}>
+        <RegisterForm/>
+      </PopUp>
+      <PopUp open={isLoginOpen} handleClose={()=>setLoginOpen(false)}>
+        <LoginForm/>
+      </PopUp>
     </Box>
   );
 };
