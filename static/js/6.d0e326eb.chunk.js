@@ -1,0 +1,2 @@
+(this.webpackJsonpgranite=this.webpackJsonpgranite||[]).push([[6],{265:function(e,t,n){"use strict";n.r(t);var r=n(1);n(0);t.default=function(){return Object(r.jsx)(r.Fragment,{children:"Create Profile"})}}}]);
+//# sourceMappingURL=6.d0e326eb.chunk.js.map

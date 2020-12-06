@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/home/CreateProfile.js"],"names":[],"mappings":"2HAEe,qBACb,OAAO","file":"static/js/6.d0e326eb.chunk.js","sourcesContent":["import React from \"react\";\r\n\r\nexport default () => {\r\n  return <>Create Profile</>;\r\n};\r\n"],"sourceRoot":""}

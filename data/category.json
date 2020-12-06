@@ -1,0 +1,162 @@
+[
+    {
+      "children": [
+        {
+          "children": [],
+          "categoryName": "albaster block",
+          "categoryId": 3
+        },
+        {
+          "children": [],
+          "categoryName": "andisite block",
+          "categoryId": 4
+        },
+        {
+          "children": [],
+          "categoryName": "basalt block",
+          "categoryId": 5
+        },
+        {
+          "children": [],
+          "categoryName": "bluestone block",
+          "categoryId": 6
+        },
+        {
+          "children": [],
+          "categoryName": "granite block",
+          "categoryId": 7
+        },
+        {
+          "children": [],
+          "categoryName": "marble block",
+          "categoryId": 8
+        }
+      ],
+      "categoryName": "stone blocks",
+      "categoryId": 1
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "categoryName": "albester tiles and slabs",
+          "categoryId": 9
+        },
+        {
+          "children": [],
+          "categoryName": "andesite tiles and slabs",
+          "categoryId": 10
+        },
+        {
+          "children": [],
+          "categoryName": "basalt tiles and slabs",
+          "categoryId": 11
+        },
+        {
+          "children": [],
+          "categoryName": "bluestone tiles and slabs",
+          "categoryId": 12
+        },
+        {
+          "children": [],
+          "categoryName": "granite tiles and slabs",
+          "categoryId": 13
+        }
+      ],
+      "categoryName": "stone tiles and slabs",
+      "categoryId": 2
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "categoryName": "stone fireplace",
+          "categoryId": 15
+        },
+        {
+          "children": [],
+          "categoryName": "stone home decor product",
+          "categoryId": 16
+        },
+        {
+          "children": [],
+          "categoryName": "stone interor furniture",
+          "categoryId": 17
+        },
+        {
+          "children": [],
+          "categoryName": "stone molding border",
+          "categoryId": 18
+        },
+        {
+          "children": [],
+          "categoryName": "stone table top",
+          "categoryId": 19
+        }
+      ],
+      "categoryName": "integrior stone products",
+      "categoryId": 14
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "categoryName": "bar top,commercial counter",
+          "categoryId": 21
+        },
+        {
+          "children": [],
+          "categoryName": "bathroom counter top",
+          "categoryId": 22
+        },
+        {
+          "children": [],
+          "categoryName": "stone bath accessories",
+          "categoryId": 23
+        },
+        {
+          "children": [],
+          "categoryName": "stone bath tub",
+          "categoryId": 24
+        },
+        {
+          "children": [],
+          "categoryName": "stone shower tray",
+          "categoryId": 25
+        }
+      ],
+      "categoryName": "kitchen top bath top sink",
+      "categoryId": 20
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "categoryName": "precious stone stone jewellary",
+          "categoryId": 27
+        },
+        {
+          "children": [],
+          "categoryName": "roman mosaic,mosaic replica",
+          "categoryId": 28
+        },
+        {
+          "children": [],
+          "categoryName": "stone handicrafts,stone gifts",
+          "categoryId": 29
+        },
+        {
+          "children": [],
+          "categoryName": "stone relief, laser etching",
+          "categoryId": 30
+        },
+        {
+          "children": [],
+          "categoryName": "stone sculpture, stone bust",
+          "categoryId": 31
+        }
+      ],
+      "categoryName": "stone sculpture relief",
+      "categoryId": 26
+    }
+  ]

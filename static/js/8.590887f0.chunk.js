@@ -1,0 +1,2 @@
+(this.webpackJsonpgranite=this.webpackJsonpgranite||[]).push([[8],{261:function(t,e,r){"use strict";r.r(e);var n=r(1),i=(r(0),r(170)),s=r(194),c=Object(i.a)((function(t){return{root:t.mixins.gutters}}));e.default=function(){var t=c();return Object(n.jsx)("div",{className:t.root,children:Object(n.jsx)(s.a,{color:"white",children:"Orders Page"})})}}}]);
+//# sourceMappingURL=8.590887f0.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/home/ProfilePage.js"],"names":[],"mappings":"4HAEe,qBACb,OAAO","file":"static/js/12.c7b53848.chunk.js","sourcesContent":["import React from \"react\";\r\n\r\nexport default () => {\r\n  return <>Profile Page</>;\r\n};\r\n"],"sourceRoot":""}
